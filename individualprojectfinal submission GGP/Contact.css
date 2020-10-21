@@ -1,0 +1,125 @@
+html {
+    min-height: 100%;
+    min-height: 100%;
+    background-image: url(HomePageImages/wolfgang-hasselmann-5wdTRm7FOFU-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10%;
+  }
+  
+  .topnav {
+    background-color: #193A97;
+    overflow: hidden;
+    border-radius: 30px;
+    opacity: 0.55;
+    height: 55px;
+  }
+  
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: -10%;
+  }
+  
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black; 
+  }
+  
+ 
+  .topnav a.active {
+    background-color: black;
+    color: white; 
+  }
+
+  .topnav-right {
+     float: right;
+     margin-right: 2%;
+  }
+
+  .topnav-center {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+  }
+
+  a:link {
+    color: white;
+  }
+  
+  a:hover {
+      color: slateblue;
+  }
+
+  a:visited {
+      color: white;
+  }
+
+  body {
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+  }
+
+  h1 {
+      text-align:center;
+    }
+
+  h4 {
+      text-align:center;
+  }
+
+  #bodyTitle {
+font-size: 25px;
+  }
+
+  #bodyTitle2 {
+    font-size: 20px;
+  }
+
+  form {
+      text-align:center;
+  }
+
+  #name {
+        border-radius: 30px;
+        border-style: none;
+  }
+
+  #myemail {
+        border-radius: 30px;
+        border-style: none;
+  }
+ 
+  #comments {
+        border-radius: 30px;
+        border-style: none;
+  }
+  
+  .footer {
+    position: absolute;
+    left: 0;
+    margin-bottom: -20;
+    margin-left: 240px;
+    margin-top: 7%;
+    width: 70%;
+    background-color: #193A97;
+    color: white;
+    text-align: center;
+    opacity:0.7;
+    border-radius: 30px;
+   
+  }
+
+  

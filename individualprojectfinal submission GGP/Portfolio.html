@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--I took your advice, Tarun and got rid of the drop down menu and cleaned up the design of the website-->
+        <title>GarethGravelinePleau-Portfolio</title>
+        <meta name="GarethGravelinePleauWebPage" content="HTML, CSS">
+        <link rel="stylesheet" href="Portfolio.css">
+        <script src="Portfolio.js"></script>
+    </head>
+    
+    <body>
+        
+        <header>
+         
+        <div class="topnav" >
+            <p class="topnav-center" style= "color: white; float: none; margin-left: 44%;"> Gareth-Evers Graveline-Pleau </p>
+            <div class="topnav-right">
+              <a href="homepage.html">Home</a>
+              <a class="active" href="Portfolio.html">Portfolio</a>
+              <a href="Resume.html">Resume</a>
+              <a href="Contact.html">Contact</a>
+            </div>
+        </div>
+        </header>
+
+        
+
+        <h1>Come See What I've Been Working On!</h1>
+
+        <div class="row"> <!--Here is our Gallery with multiple columns-->
+            <div class="column">
+                <div class="portfolioHeadings">
+                    <h2>Project - Admin Login</h2>
+                </div>
+                <div class="container1">
+                    <img src="HomePageImages/portfolio1.png"  alt="Portfolio"
+                    onclick="onClick(this)" class="modal-hover-opacity"  >
+                    <p style="font-family: 'Courier New', Courier, monospace; color: white;">Login Interface</p>
+                   
+                    <img src="HomepageImages/portfolio2.png" alt="Portfolio"
+                    onclick="onClick(this)" class="modal-hover-opacity" >
+                    <p style="font-family: 'Courier New', Courier, monospace; color: white;">Gallery Edit Page</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="portfolioHeadings">
+                    <h2>Coming Soon</h2>
+                </div>
+                <div class="container1">
+
+                    <img src="HomePageImages/portfolio3.jpg" alt="Empty" 
+                    onclick="onClick(this)" class="modal-hover-opacity" >
+
+                    <img src="HomePageImages/Empty.png" alt="Empty" 
+                    onclick="onClick(this)" class="modal-hover-opacity">
+
+                    <img src="HomePageImages/Empty.png" alt="Empty" 
+                    onclick="onClick(this)" class="modal-hover-opacity">
+
+                    <img src="HomePageImages/Empty.png" alt="Empty"
+                    onclick="onClick(this)" class="modal-hover-opacity" >
+                </div>
+            </div>
+            <div class="column">
+                <div class="portfolioHeadings">
+                    <h2>Coming Soon</h2>
+                </div>
+                <div class="container1">
+
+                    <img src="HomePageImages/portfolio3.jpg" alt="Empty" 
+                    onclick="onClick(this)" class="modal-hover-opacity">
+
+                    <img src="HomePageImages/Empty.png" alt="Empty" 
+                    onclick="onClick(this)" class="modal-hover-opacity">
+
+                    <img src="HomePageImages/Empty.png" alt="Empty"
+                    onclick="onClick(this)" class="modal-hover-opacity" >
+
+                    <img src="HomePageImages/Empty.png" alt="Empty"
+                    onclick="onClick(this)" class="modal-hover-opacity" >
+                  
+                </div>
+            </div>
+            <div class="column">
+                <div class="portfolioHeadings">
+                    <h2>Coming Soon</h2>
+                </div>
+                <img src="HomePageImages/portfolio3.jpg" alt="Empty">
+                <img src="HomePageImages/Empty.png" alt="Empty">
+                <img src="HomePageImages/Empty.png" alt="Empty">
+                <img src="HomePageImages/Empty.png" alt="Empty">     
+            </div>
+
+            <div id="modal01" class="modal" onclick="this.style.display='none'"> <!--Here is our modal to get the portfolio gallery pics to pop out when clicked-->
+                <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <div class="modal-content">
+                  <img id="img01" style="max-width:100%">
+                </div>
+              </div>
+              
+    </body>  
+    <footer class="footer">
+        <p2 style="font-size: 8px; text-align:left; margin-top: 14%; font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; opacity: 0.6;">
+        Contact: <a href="Contact.html" style="color: white;">gherring@alumni.uoguelph.ca</a> <br>
+        <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style="color:white">Linkedin</a> <br>
+        Background Picture Courtesty of: Wolfgang-Hasselmann</p2>
+    </footer>
+    
+</html>
