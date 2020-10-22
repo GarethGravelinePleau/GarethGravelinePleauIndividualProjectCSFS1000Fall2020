@@ -1,3 +1,5 @@
+
+
 html {
   height: 100%;
   background-image: url(HomePageImages/wolfgang-hasselmann-5wdTRm7FOFU-unsplash.jpg);
@@ -19,6 +21,7 @@ body {
   border-radius: 30px;
   opacity: 0.55;
   height: 55px;
+  margin-top: -0.5%;
 }
 
 
@@ -101,6 +104,8 @@ a:hover {
   left: 0;
   bottom: 0;
   margin-left: 240px;
+  margin-bottom: -4.5%;
+  margin-top: 30px;
   width: 70%;
   background-color: #193A97;
   color: white;
@@ -109,3 +114,8 @@ a:hover {
   border-radius: 30px;
 }
 
+#logo {
+  opacity: 0.5;
+  margin-left: 97%;
+  margin-bottom: -3.5%;
+}

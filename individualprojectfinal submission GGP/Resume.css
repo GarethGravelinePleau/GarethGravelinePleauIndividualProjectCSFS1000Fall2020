@@ -19,6 +19,7 @@ html {
     border-radius: 30px;
     opacity: 0.55;
     height: 55px;
+    margin-top: -0.5%;
     
   }
   
@@ -126,7 +127,11 @@ html {
     position: static;
   }
   
-  
+  #logo {
+    opacity: 0.5;
+    margin-left: 97%;
+    margin-bottom: -12%;
+  }
   
   
   
