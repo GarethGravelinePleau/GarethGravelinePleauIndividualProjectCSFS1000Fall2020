@@ -125,8 +125,17 @@ font-size: 25px;
     cursor: pointer;
   }
 
+  .button {
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    background-color: rgb(189, 178, 178); 
+    color: white;
+  }
+  
   #comments{
-    height: 40px;
+    
     width:250px;
     border-color: grey;
     opacity: 06;
