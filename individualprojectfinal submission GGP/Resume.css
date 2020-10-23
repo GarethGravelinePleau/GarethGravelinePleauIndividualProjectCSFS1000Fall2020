@@ -100,18 +100,13 @@ html {
   }
  
   .footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin-left: 240px;
-    margin-top: 50%;
-    margin-bottom: -13%;
-    width: 70%;
-    background-color: #193A97;
+    
     color: white;
     text-align: center;
-    opacity:0.7;
     border-radius: 30px;
+    margin-bottom: -9%;
+    margin-top: 100px;
+    
   }
 
   .container {
@@ -128,7 +123,6 @@ html {
   }
   
   #logo {
-    opacity: 0.5;
     margin-left: 97%;
     margin-bottom: -12%;
   }
