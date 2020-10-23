@@ -6,7 +6,7 @@
 
 html {
   height: 100%;
-  background-image: url(HomePageImages/wolfgang-hasselmann-5wdTRm7FOFU-unsplash.jpg);
+  background-image: url(./HomePageImages/wolfgang-hasselmann-5wdTRm7FOFU-unsplash.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,6 +101,10 @@ a:link {
 
 a:hover {
     color: slateblue;
+}
+
+#name {
+  font-family: Arizonia;
 }
 
 .footer {
