@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: Arizonia;
-  src: url("./Fonts/Arizonia-Regular.ttf");
+  src: url("./fonts/Arizonia-Regular.ttf");
 }
 
 html {
@@ -13,13 +13,11 @@ html {
   background-size: cover;
 }
 
-
-
 body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.topnav {
+.topnavh {
   background-color: #193A97;
   overflow: hidden;
   border-radius: 30px;
@@ -29,7 +27,7 @@ body {
 }
 
 
-.topnav a {
+.topnavh a {
   float: left;
   color: #f2f2f2;
   text-align: right;
@@ -88,7 +86,6 @@ margin-left: 8%;
 #containerText {
   
   text-align: center;
-  margin-left: 40%;
   color: #EDF0F9;
   font-family: 'Courier New', Courier, monospace, Geneva, Tahoma, sans-serif;
   font-size: 20px;

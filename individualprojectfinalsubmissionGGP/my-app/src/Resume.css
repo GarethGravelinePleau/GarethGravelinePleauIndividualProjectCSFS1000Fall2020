@@ -1,6 +1,5 @@
 html {
     min-height: 100%;
-    min-height: 100%;
     background-image: url(HomePageImages/wolfgang-hasselmann-5wdTRm7FOFU-unsplash.jpg);
     background-attachment: fixed;
   background-position: center;
@@ -10,7 +9,8 @@ html {
   
   body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 10%;
+    margin: 0%;
+    height: 100%;
   }
   
   .topnav {
@@ -54,7 +54,7 @@ html {
       font-size: 15px;
   }
 
-  #personalPhoto {
+  #personalPhoto2 {
       float: right;
       margin-right: 18%;
       margin-top:10%;
