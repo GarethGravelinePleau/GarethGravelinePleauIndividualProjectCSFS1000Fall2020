@@ -1,10 +1,10 @@
-html {
+  html { 
     min-height: 100%;
     background-image: url(HomePageImages/wolfgang-hasselmann-5wdTRm7FOFU-unsplash.jpg);
     background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   body {
@@ -45,32 +45,32 @@ html {
   }
 
   .topnav-right {
-     float: right;
-     margin-right: 2%;
+    float: right;
+    margin-right: 2%;
   }
 
   .topnav-center {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
   }
 
   #personalPhoto2 {
-      float: right;
-      margin-right: 18%;
-      margin-top:10%;
-      opacity: 0.7;
-      border: solid;
-      border-radius: 5px;
-      border-color: black;
-      border-spacing: 0px;
-      border-bottom: 0px;
+    float: right;
+    margin-right: 18%;
+    margin-top:10%;
+    opacity: 0.7;
+    border: solid;
+    border-radius: 5px;
+    border-color: black;
+    border-spacing: 0px;
+    border-bottom: 0px;
   }
 
   h1 {
-      font-family: 'Courier New', Courier, monospace;
-      color: white;
-      text-align: left;
-      margin-left: 15%;   
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: left;
+    margin-left: 15%;   
   }
 
   h2 {
@@ -81,10 +81,10 @@ html {
   }
 
   p {
-      font-family: 'Courier New', Courier, monospace;
-      color: white;
-      text-align: left;
-      margin-left:15%;  
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: left;
+    margin-left:15%;  
   }
 
   a:link {
@@ -92,11 +92,11 @@ html {
   }
   
   a:hover {
-      color: slateblue;
+    color: slateblue;
   }
 
   a:visited {
-      color: white;
+    color: white;
   }
  
   .footer {

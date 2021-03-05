@@ -16,63 +16,18 @@ html {
 body {
   font-family: 'Courier New', Courier, monospace;
 }
-
-.topnavh {
-  background-color: #193A97;
-  overflow: hidden;
-  border-radius: 30px;
-  opacity: 0.55;
-  height: 55px;
-  margin-top: -0.5%;
-}
-
-
-.topnavh a {
-  float: left;
-  color: #f2f2f2;
-  text-align: right;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 12px;
-  font-family: 'Courier New', Courier, monospace;
-  margin-top: -10%;
-}
-
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-  
-}
-
-
-.topnav a.active {
-  background-color: black;
-  color: white;
-  
-}
-
-.topnav-right {
-   float: right;
-   margin-right: 2%;
-}
-
-.topnav-center {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-}
  
 #personalPhoto {
 position: sticky;
 opacity: 1;
-width: 100px;
-z-index: -1;
+max-width: 100%;
+z-index: 0;
 opacity: 0.6;
 margin-top: 3%;
 height: auto;
 max-width: 100%;
 float: left;
-margin-left: 8%;
+margin-left: 11%;
 
 }
 

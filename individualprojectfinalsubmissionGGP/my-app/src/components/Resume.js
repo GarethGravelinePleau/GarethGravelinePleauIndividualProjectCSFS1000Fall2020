@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Resume.css";
+import '../Resume.css';
 import logo from '../HomePageImages/GGP Logo.png'
 import me from '../HomePageImages/Mypicture2.jpeg'
  
@@ -11,15 +11,6 @@ const Resume = () => {
           <title>GarethGravelinePleau-Resume</title>
           <meta name="GarethGravelinePleauWebPage" content="HTML, CSS" />
           <header>
-            <div className="topnav">
-              <p className="topnav-center" style={{color: 'white', float: 'none', marginLeft: '44%'}}> Gareth-Evers Graveline-Pleau </p>
-              <div className="topnav-right">
-                <a href="homepage.html">Home</a>
-                <a href="Portfolio.html">Portfolio</a>
-                <a className="active" href="Resume.html">Resume</a>
-                <a href="Contact.html">Contact</a>
-              </div>
-            </div>
             <div id="personalPhoto2">
               <img src={me} alt="Me" width={280} height={362} />
             </div>
@@ -35,19 +26,19 @@ const Resume = () => {
           </p>
           <br /><br />
           <h2>General</h2>
-          <p> DOB         March 25, 1989 </p>
-          <p>Address         175, Columbia Road, Barrie, Ontario, Canada</p>
-          <p>Phone           705-500-0181</p>
-          <p>Email           <a href="Contact.html">gherring@alumni.uoguelph.ca</a>  </p>       
+          <p> DOB March 25, 1989 </p>
+          <p>Address 175, Columbia Road, Barrie, Ontario, Canada</p>
+          <p>Phone 705-500-0181</p>
+          <p>Email <a href="Contact.html">gherring@alumni.uoguelph.ca</a>  </p>       
           <br /><br />
           <h2>Employment</h2>
-          <p>Elections Canada 2019           Poll Clerk - Tabulating official elections results for Elections Canada.</p>
-          <p>Loblaws 2017-2020               Clerk</p>
+          <p>Elections Canada 2019 Poll Clerk - Tabulating official elections results for Elections Canada.</p>
+          <p>Loblaws 2017-2020 Clerk</p>
           <p>Highschool Math Tutor 2007-Ongoing - Assisting students in university math preparation.</p>
           <br /><br />
           <h2>Education</h2>
-          <p>York University - Certificate in Full Stack Web Development           2020-2021</p>
-          <p>University of Guelph - BA Political Science      2007-2012</p>
+          <p>York University - Certificate in Full Stack Web Development 2020-2021</p>
+          <p>University of Guelph - BA Political Science 2007-2012</p>
           <p>Laubach Literacy Tutoring Certification</p>
           <p>University Entry Calculus Certificate</p>
           <br /><br />

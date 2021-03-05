@@ -13,76 +13,34 @@ html {
     margin-bottom: 10%;
   }
   
-  .topnav {
-    background-color: #193A97;
-    overflow: hidden;
-    border-radius: 30px;
-    opacity: 0.55;
-    height: 55px;
-    margin-top: -0.5%;
-  }
-  
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 12px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: -10%;
-  }
-  
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black; 
-  }
-  
- 
-  .topnav a.active {
-    background-color: black;
-    color: white; 
-  }
-
-  .topnav-right {
-     float: right;
-     margin-right: 2%;
-  }
-
-  .topnav-center {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 15px;
-  }
 
   a:link {
     color: white;
   }
   
   a:hover {
-      color: slateblue;
+    color: slateblue;
   }
 
   a:visited {
-      color: white;
+    color: white;
   }
 
   body {
-      font-family: 'Courier New', Courier, monospace;
-      color: white;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
   }
 
   h1 {
-      text-align:center;
-    }
+    text-align:center;
+  }
 
   h4 {
-      text-align:center;
+    text-align:center;
   }
 
   #bodyTitle {
-font-size: 25px;
+    font-size: 25px;
   }
 
   #bodyTitle2 {
@@ -90,24 +48,42 @@ font-size: 25px;
   }
 
   form {
-      text-align:center;
+    text-align:center;
   }
 
   #namecontact {
-        border-radius: 30px;
-        border-style: none;
+    border-radius: 30px;
+    border-style: none;
+    background-color: white;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 28px;
   }
 
   #myemail {
-        border-radius: 30px;
-        border-style: none;
+    border-radius: 30px;
+    border-style: none;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  #phoneNumber {
+    border-radius: 30px;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 2px;
   }
  
   #comments {
-        border-radius: 30px;
-        border-style: none;
+    border-radius: 30px;
+    border-style: none;
+    background-color: white;
+    margin-top: 30px;
   }
-  input[type=submit], input[type=reset] {
+
+  #submitbtn, #resetbtn {
     background-color: blue;
     border: none;
     color: white;
@@ -118,18 +94,19 @@ font-size: 25px;
     opacity: 0.6;
     border-radius: 12px;
   }
-  input[type=name], input[type=email] {
+  #namecontact, #phoneNumber, #myemail{
     height: 20px;
     width: 200px;
     opacity: 0.6;
     cursor: pointer;
   }
 
-  .button {
+  #submitbtn, #resetbtn {
     transition-duration: 0.4s;
+    margin-top: 35px;
   }
   
-  .button:hover {
+  #submitbtn:hover, #resetbtn:hover {
     background-color: rgb(39, 24, 24); 
     color: white;
   }
