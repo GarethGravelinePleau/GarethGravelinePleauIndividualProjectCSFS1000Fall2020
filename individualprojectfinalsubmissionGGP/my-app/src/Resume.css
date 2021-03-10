@@ -12,47 +12,6 @@
     margin: 0%;
     height: 100%;
   }
-  
-  .topnav {
-    background-color: #193A97;
-    overflow: hidden;
-    border-radius: 30px;
-    opacity: 0.55;
-    height: 55px;
-    margin-top: -0.5%;
-    
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 12px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: -10%;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: black;
-    color: white; 
-  }
-
-  .topnav-right {
-    float: right;
-    margin-right: 2%;
-  }
-
-  .topnav-center {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-  }
 
   #personalPhoto2 {
     float: right;

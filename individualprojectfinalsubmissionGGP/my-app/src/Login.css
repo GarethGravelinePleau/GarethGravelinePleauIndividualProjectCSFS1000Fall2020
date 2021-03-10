@@ -1,0 +1,98 @@
+body {
+	font-family: "Courier New", Courier, monospace;
+	margin-bottom: 10%;
+}
+
+.topnav {
+	background-color: #193a97;
+	overflow: hidden;
+	border-radius: 30px;
+	opacity: 0.55;
+	height: 55px;
+	margin-bottom: 5%;
+	margin-top: -0.5%;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: right;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: "Courier New", Courier, monospace;
+	margin-top: -10%;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: black;
+	color: white;
+}
+
+.topnav-right {
+	float: right;
+	margin-right: 2%;
+}
+
+.topnav-center {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 15px;
+}
+
+a:link {
+	color: white;
+}
+
+a:hover {
+	color: slateblue;
+}
+
+#loginEmail {
+	border-radius: 30px;
+	border-style: none;
+	background-color: white;
+	margin-top: 20px;
+	font-family: "Courier New", Courier, monospace;
+	margin-right: 28px;
+}
+
+#examplePassword {
+	border-radius: 30px;
+	border-style: none;
+	background-color: white;
+	margin-top: 20px;
+	font-family: "Courier New", Courier, monospace;
+	margin-right: 28px;
+}
+#loginButton {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 12px;
+  }
+  #examplePassword, #loginEmail{
+    height: 20px;
+    width: 200px;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  #loginButton {
+    transition-duration: 0.4s;
+    margin-top: 35px;
+  }
+  
+  #loginButton:hover {
+    background-color: rgb(39, 24, 24); 
+    color: white;
+  }

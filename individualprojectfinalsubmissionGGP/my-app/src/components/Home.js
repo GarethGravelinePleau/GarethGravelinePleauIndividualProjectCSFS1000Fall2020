@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Homepage.css';
-import logo from '../HomePageImages/GGP Logo.png'
 import me from '../HomePageImages/Mypicture2.jpeg'
  
 const home = () => {
@@ -29,7 +28,7 @@ const home = () => {
                 <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style={{color: 'white'}}>Linkedin</a> <br />
                 Background Picture Courtesty of: Wolfgang-asselmann</p2> 
             </footer>
-            <img src={logo} alt="logo" width={50} height={50} id="logo" />
+            
           </div></div>
       );
 }

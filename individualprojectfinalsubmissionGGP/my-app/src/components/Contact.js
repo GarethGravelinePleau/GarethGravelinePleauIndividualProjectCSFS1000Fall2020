@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../Contact.css';
-import logo from '../HomePageImages/GGP Logo.png'
 import { Form, Input, Label, Button, Container } from 'reactstrap'
  
 const Contact = () => {
@@ -30,13 +29,13 @@ const Contact = () => {
     return (
        <div style= {{fontFamily: 'Courier New, Courier, monospace'}}>
         
-        <h4><div id="bodyTitle">If you have any questions or comments <br /><br /> please feel free to send me a comment below or contact me at:</div><br /><br /><br /><br /><br />705-500-0181<br /><br /><a href="ContactPage.html">gherring@alumni.uoguelph.ca</a><br /><br />or through <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/">LinkedIn</a><br /><br /><br /><br /><div id="bodyTitle2">My Mission Statement is simple:<br />
+        <h4><div id="bodyTitle">If you have any questions or comments <br/><br/> please feel free to send me a comment below or contact me at:</div><br /><br /><br /><br /><br />705-500-0181<br /><br /><a href="ContactPage.html">gherring@alumni.uoguelph.ca</a><br /><br />or through <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/">LinkedIn</a><br /><br /><br /><br /><div id="bodyTitle2">My Mission Statement is simple:<br />
             
-        <br /><br />
+        <br/><br/>
         <div style={{fontSize: '25px'}}><strong>Vibrant websites built for a sustainable future.</strong></div><br /><br /> <br /> Thank you for visiting, I look forward to hearing from you!</div> </h4><br /><br /><br /><br />
 
         <Container>
-            <Form className="my-5" onSubmit={formSubmit}>
+            <Form onSubmit={formSubmit}>
                
                     <Label for="emailEntry" name="myemail" style={{marginLeft:'-50px'}}>Email:</Label>
                     <Input type="email" name="email" id="myemail" style={{marginRight:'1%'}} onChange={e => setEmail(e.target.value) }/>
@@ -60,8 +59,6 @@ const Contact = () => {
                    
                     <Button className="button" id="resetbtn" type="reset" defaultValue='Reset'>Reset</Button>
                     
-                    
-               
             </Form>
         </Container>
         <footer className="footer">
@@ -73,7 +70,7 @@ const Contact = () => {
           </p2> 
         </footer> 
 
-        <img src={logo} alt="logo" width={50} height={50} id="logo" />
+        
       </div>
     );
 }
