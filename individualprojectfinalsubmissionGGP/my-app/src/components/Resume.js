@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
  
 const Resume = () => {
     return (
-        <div>
+        <div> {/* will be cleaning up the semantics in this resume section */}
           <div id="personalPhoto2">
             <img src={me} alt="Me" width={280} height={362} />
             </div>

@@ -31,7 +31,7 @@ const Listings = () => {
     return (
         <container>
             
-                <h1 style={{fontSize:"30px", textAlign:"center", marginBottom:"50px"}}>Hello: {user}, here are your entries!</h1>
+            <h1 style={{fontSize:"30px", textAlign:"center", marginBottom:"50px"}}>Hello: {user}, here are your entries!</h1>
             
             <table id="listingTable">
                 <thead>

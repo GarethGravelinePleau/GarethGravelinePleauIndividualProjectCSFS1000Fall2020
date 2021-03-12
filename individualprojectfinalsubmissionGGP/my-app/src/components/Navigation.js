@@ -7,7 +7,6 @@ const Navigation = () => {
        
           
           <div className="topnav">
-            
             <div className="topnav-right">
             
             <NavLink tag={RouteLink} to="/home">Home</NavLink>
@@ -15,7 +14,6 @@ const Navigation = () => {
             <NavLink tag={RouteLink} to="/resume">Resume</NavLink>
             <NavLink tag={RouteLink} to="/contact">Contact</NavLink>
             <NavLink tag={RouteLink} to="/entries">Entries</NavLink>
-            
             
             </div>
           </div>

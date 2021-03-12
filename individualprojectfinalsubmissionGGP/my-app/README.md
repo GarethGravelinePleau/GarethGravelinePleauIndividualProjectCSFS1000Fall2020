@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+References:
+
+https://www.golangprograms.com/how-to-create-simple-react-router-to-navigate-multiple-pages.html
+
+https://www.andreasreiterer.at/connect-react-app-rest-api/
+
+https://dzone.com/articles/consuming-rest-api-with-reactjs
+
+https://magic.reactjs.net/htmltojsx.htm
+
+https://forum.freecodecamp.org/t/how-to-submit-form-data-to-a-restful-api-in-react/163032
