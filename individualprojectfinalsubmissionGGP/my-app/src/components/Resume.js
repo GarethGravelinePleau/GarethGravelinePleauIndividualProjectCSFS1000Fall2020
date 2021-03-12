@@ -1,12 +1,13 @@
 import React from 'react';
 import '../Resume.css';
 import me from '../HomePageImages/Mypicture2.jpeg'
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
  
 const Resume = () => {
     return (
         <div>
-          <title>GarethGravelinePleau-Resume</title>
-          <meta name="GarethGravelinePleauWebPage" content="HTML, CSS" />
           <div id="personalPhoto2">
             <img src={me} alt="Me" width={280} height={362} />
             </div>
@@ -45,9 +46,8 @@ const Resume = () => {
           <p />
           <br/><br/>
           <footer className="footer">
-            <p2 style={{fontSize: '8px', textAlign: 'left', marginTop: '14%', fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', color: 'white', opacity: '0.6'}}>
-              Contact: <a href="Contact.html">gherring@alumni.uoguelph.ca</a> <br />
-              <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style={{color: 'white'}}>Linkedin</a> <br />
+            <p2 style={{fontSize: '8px', textAlign: 'left', marginTop: '14%', fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', color: 'white'}}>
+              <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style={{color: 'white', fontSize: "15px"}}><FaLinkedin/></a><a href="https://www.instagram.com/garethevers/?hl=en" style={{color: 'white', fontSize: "15px", marginLeft: "5px"}}><FaInstagram/></a><a href="https://github.com/GarethGravelinePleau" style={{color: 'white', fontSize: "15px", marginLeft: "5px"}}><FaGithub/></a> <br />
               Background Picture Courtesty of: Wolfgang-Hasselmann
             </p2> 
           </footer>

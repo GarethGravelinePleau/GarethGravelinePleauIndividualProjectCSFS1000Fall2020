@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../Contact.css';
-import { Form, Input, Label, Button, Container } from 'reactstrap'
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
  
 const Contact = () => {
 
@@ -34,38 +36,34 @@ const Contact = () => {
         <br/><br/>
         <div style={{fontSize: '25px'}}><strong>Vibrant websites built for a sustainable future.</strong></div><br /><br /> <br /> Thank you for visiting, I look forward to hearing from you!</div> </h4><br /><br /><br /><br />
 
-        <Container>
-            <Form onSubmit={formSubmit}>
-               
-                    <Label for="emailEntry" name="myemail" style={{marginLeft:'-50px'}}>Email:</Label>
-                    <Input type="email" name="email" id="myemail" style={{marginRight:'1%'}} onChange={e => setEmail(e.target.value) }/>
-                    <br/> 
-                
-                    <Label for="phoneEntry">Phone Number:</Label>
-                    <Input type="phone" name="phoneNumber" id="phoneNumber"  onChange={e => setPhoneNumber(e.target.value)}/>
-                    
-                    <br/> 
-                    <Label for="nameEntry">Full Name:</Label>
-                    
-                    <Input type="name" name="name" id="namecontact" onChange={e => setName(e.target.value)}/>
-                    
-                    <br/> 
-                    <Label for="messageEntry">Message:</Label>
-                    
-                    <Input type="textarea" name="text" id="comments" rows={1} cols={15} onChange={e => setContent(e.target.value)}/>
-                 
-                    <br/>
-                    <Button className="button" id="submitbtn" type='submit' defaultValue='Submit'>Submit</Button>
-                   
-                    <Button className="button" id="resetbtn" type="reset" defaultValue='Reset'>Reset</Button>
-                    
-            </Form>
-        </Container>
+            <div className="loginContainer">
+        <section>
+          <form onSubmit={formSubmit}>
+            <label>
+              <input name="name" id="contactName" type="text" onChange={e => setName(e.target.value)} />
+              <div className="label-text">Full Name</div>
+            </label>
+            <label>
+              <input type="text" name="email" id="email" onChange={e => setEmail(e.target.value) }/>
+              <div className="label-text">Email</div>
+            </label>
+            <label>
+              <input type="tel" name="phone" id="phone" onChange={e => setPhoneNumber(e.target.value)}/>
+              <div className="label-text">Phone Number</div>
+            </label>
+            <label>
+              <input type="textarea" name="text" id="comments" onChange={e => setContent(e.target.value)}/>
+              <div className="label-text">Comments</div>
+            </label>
+            <button type="submit" value="Submit">Submit</button>
+          </form>
+        </section>
+      </div>
+        
         <footer className="footer">
 
-          <p2 style={{fontSize: '8px', textAlign: 'left', marginTop: '14%', paddingBottom: 0, fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', color: 'white', opacity: '0.6'}}>
-            Contact:gherring@alumni.uoguelph.ca<br />
-            <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style={{color: 'white'}}>Linkedin</a> <br />
+          <p2 style={{fontSize: '8px', textAlign: 'left', marginTop: '14%', paddingBottom: 0, fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', color: 'white'}}>
+            <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style={{color: 'white', fontSize: "15px"}}><FaLinkedin/></a><a href="https://www.instagram.com/garethevers/?hl=en" style={{color: 'white', fontSize: "15px", marginLeft: "5px"}}><FaInstagram/></a><a href="https://github.com/GarethGravelinePleau" style={{color: 'white', fontSize: "15px", marginLeft: "5px"}}><FaGithub/></a> <br />
             Background Picture Courtesty of: Wolfgang-Hasselmann
           </p2> 
         </footer> 

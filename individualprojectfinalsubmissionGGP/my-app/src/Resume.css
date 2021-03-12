@@ -11,14 +11,15 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0%;
     height: 100%;
+    text-shadow: 1px 1px 1px #999;
   }
 
   #personalPhoto2 {
     float: right;
     margin-right: 18%;
     margin-top:10%;
+    margin-bottom: 30px;
     opacity: 0.7;
-    border: solid;
     border-radius: 5px;
     border-color: black;
     border-spacing: 0px;
@@ -81,11 +82,6 @@
     position: static;
   }
   
-  #logo {
-    margin-left: 97%;
-    margin-bottom: -12%;
-    opacity: 0.7;
-  }
   
   
   

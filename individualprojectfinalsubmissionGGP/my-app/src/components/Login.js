@@ -1,7 +1,10 @@
 import React, { useState} from 'react'
-import { Button, Form, Label, Input} from 'reactstrap'
 import '../Login.css';
 import { useHistory, useLocation } from 'react-router-dom'
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
 
 const Login = () => {
     let history = useHistory();
@@ -33,19 +36,30 @@ const Login = () => {
 
           return (
             
-              <Form onSubmit={loginSubmit} className="form">
-                
-                    <Label for="loginEmail">Email: </Label>
-                    <Input type="email" name="loginEmail" id="loginEmail" placeholder="myemail@email.com" onChange={e => setEmail(e.target.value)}/>
-                      <br/>
-                  
-                    <Label for="examplePassword">Password: </Label>
-                    <Input type="password" name="examplePassword" id="examplePassword" placeholder="********" onChange={e => setPassword(e.target.value)} />
-                      <br/>
+             <div>
+              <div className="loginContainer" id="loginContainer">
+              <section>
+                <form onSubmit={loginSubmit}>
+                  <label>
+                    <input type="text" name="email" id="email" onChange={e => setEmail(e.target.value) }/>
+                    <div className="label-text">Email</div>
+                  </label>
+                  <label>
+                    <input type="password" name="password" id="password" onChange={e => setPassword(e.target.value)}/>
+                    <div className="label-text">Password</div>
+                  </label>
+                  <button type="submit" value="Submit">Submit</button>
+                </form>
+              </section>
+            </div>
+            <footer className="footer" id="loginFooter">
+              <p2 style={{fontSize: '8px', textAlign: 'left', marginTop: '150px', fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', color: 'white'}}>
+                <a href="https://www.linkedin.com/in/gareth-evers-graveline-pleau-3707891b8/" style={{color: 'white', fontSize: "15px"}}><FaLinkedin/></a><a href="https://www.instagram.com/garethevers/?hl=en" style={{color: 'white', fontSize: "15px", marginLeft: "5px"}}><FaInstagram/></a><a href="https://github.com/GarethGravelinePleau" style={{color: 'white', fontSize: "15px", marginLeft: "5px"}}><FaGithub/></a> <br />
+                Background Picture Courtesty of: Wolfgang-Hasselmann</p2>
+            </footer>
+            </div>
 
-                    <Button id="loginButton">Submit</Button>
-
-              </Form>
+            
            
           );
         

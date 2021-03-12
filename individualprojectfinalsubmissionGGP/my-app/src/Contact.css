@@ -41,83 +41,106 @@ html {
 
   #bodyTitle {
     font-size: 25px;
+    margin-top: 10vw;
   }
 
   #bodyTitle2 {
     font-size: 20px;
   }
 
+  
+  div.loginContainer{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
   form {
-    text-align:center;
+  text-align: center;
+  border: 1px solid white;
+  padding: 30px;
+  text-shadow: none;
   }
 
-  #namecontact {
-    border-radius: 30px;
-    border-style: none;
-    background-color: white;
-    margin-top: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-right: 28px;
+  label {
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center;
   }
 
-  #myemail {
-    border-radius: 30px;
-    border-style: none;
-    background-color: white;
-    font-family: 'Courier New', Courier, monospace;
+  label .label-text {
+  color: #4c4545;
+  cursor: text;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  -moz-transform: translateY(-34px);
+  -ms-transform: translateY(-34px);
+  -webkit-transform: translateY(-34px);
+  transform: translateY(-34px);
+  transition: all 0.3s;
+  opacity: none;
   }
 
-  #phoneNumber {
-    border-radius: 30px;
-    border-style: none;
-    cursor: pointer;
-    margin-top: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-right: 2px;
-  }
- 
-  #comments {
-    border-radius: 30px;
-    border-style: none;
-    background-color: white;
-    margin-top: 30px;
-  }
-
-  #submitbtn, #resetbtn {
-    background-color: blue;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    opacity: 0.6;
-    border-radius: 12px;
-  }
-  #namecontact, #phoneNumber, #myemail{
-    height: 20px;
-    width: 200px;
-    opacity: 0.6;
-    cursor: pointer;
+  label input {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
   }
 
-  #submitbtn, #resetbtn {
-    transition-duration: 0.4s;
-    margin-top: 35px;
+  label input:focus {
+  max-width: 100%;
+  width: 400px;
   }
-  
-  #submitbtn:hover, #resetbtn:hover {
-    background-color: rgb(39, 24, 24); 
-    color: white;
+
+  label input:focus + .label-text {
+  color: #F0F0F0;
+  font-size: 13px;
+  margin-top: 10px;
+  -moz-transform: translateY(-74px);
+  -ms-transform: translateY(-74px);
+  -webkit-transform: translateY(-74px);
+  transform: translateY(-74px);
   }
-  
-  #comments{
-    
-    width:250px;
-    border-color: grey;
-    opacity: 0.6;
-    background-color: white;
+
+
+  label input:valid + .label-text {
+  font-size: 13px;
+  -moz-transform: translateY(-74px);
+  -ms-transform: translateY(-74px);
+  -webkit-transform: translateY(-74px);
+  transform: translateY(-74px);
   }
+
+
+  button {
+  font-family: 'Courier New', Courier, monospace;
+  background: transparent;
+  color: #F0F0F0;
+  border: 2px solid #F0F0F0;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 20px 75px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 15px 30px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  }
+
   .footer {
     color: white;
     text-align: center;
@@ -126,31 +149,7 @@ html {
     margin-top: 100px;
   }
 
-  #logo {
-    opacity: 0.7;
-    margin-left: 97%;
-    margin-bottom: -11.25%;
-  }
 
-  #portfoliotitle {
-    display: block;
-    animation: moveInLeft 1s ease-out;
-  }
 
-  @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    
-    80% {
-      transform: translateX(10px);
-    }
-    
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
-
+ 
   

@@ -10,19 +10,30 @@ body {
 	opacity: 0.55;
 	height: 55px;
 	margin-bottom: 5%;
-	margin-top: -0.5%;
+    margin-top: -0.5%;
+    text-shadow: none;
 }
 
 .topnav a {
 	float: left;
 	color: #f2f2f2;
 	text-align: right;
-	padding: 14px 16px;
+	padding: 18px 18px;
 	text-decoration: none;
-	font-size: 12px;
 	font-family: "Courier New", Courier, monospace;
-	margin-top: -10%;
+	margin-top: 3.5%;
 }
+
+@media screen and (min-width: 601px) {
+    .topnav a {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a {
+      font-size: 7px;
+    }}
 
 .topnav a:hover {
 	background-color: #ddd;
@@ -52,47 +63,10 @@ a:hover {
 	color: slateblue;
 }
 
-#loginEmail {
-	border-radius: 30px;
-	border-style: none;
-	background-color: white;
-	margin-top: 20px;
-	font-family: "Courier New", Courier, monospace;
-	margin-right: 28px;
+#loginContainer {
+    margin-top: 14%;
 }
 
-#examplePassword {
-	border-radius: 30px;
-	border-style: none;
-	background-color: white;
-	margin-top: 20px;
-	font-family: "Courier New", Courier, monospace;
-	margin-right: 28px;
+#loginFooter {
+    margin-top: 18%;
 }
-#loginButton {
-    background-color: blue;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    opacity: 0.6;
-    border-radius: 12px;
-  }
-  #examplePassword, #loginEmail{
-    height: 20px;
-    width: 200px;
-    opacity: 0.6;
-    cursor: pointer;
-  }
-
-  #loginButton {
-    transition-duration: 0.4s;
-    margin-top: 35px;
-  }
-  
-  #loginButton:hover {
-    background-color: rgb(39, 24, 24); 
-    color: white;
-  }

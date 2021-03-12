@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row, Button } from 'reactstrap'
 import parseJwt from './Authentication'
 import { useHistory } from "react-router-dom";
 import '../Listing.css';
+
+
 
 const Listings = () => {
     let history = useHistory();
@@ -28,18 +29,18 @@ const Listings = () => {
         getData()
     }, [token])
     return (
-        <Container>
-            <Row>
-                <h1>Hello: {user}, here are your entries!</h1>
-            </Row>
-            <table id="listingTable" >
+        <container>
+            
+                <h1 style={{fontSize:"30px", textAlign:"center", marginBottom:"50px"}}>Hello: {user}, here are your entries!</h1>
+            
+            <table id="listingTable">
                 <thead>
                     <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
-                    <th>Content</th>
+                    <th>Comments</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,14 +48,21 @@ const Listings = () => {
                         <tr><td colSpan="5"><i>No Current Entries</i></td></tr>
                     }
                     {listing.length > 0 &&
-                        listing.map(entry => <tr><td>{entry.id}</td><td>{entry.name}</td><td>{entry.phoneNumber}</td><td>{entry.email}</td><td>{entry.content}</td></tr>)
+                        listing.map(entry => 
+                            <tr>
+                            <td>{entry.id}</td>
+                            <td>{entry.name}</td>
+                            <td>{entry.phoneNumber}</td>
+                            <td>{entry.email}</td>
+                            <td>{entry.content}</td>
+                            </tr>)
                     }
                 </tbody>
             </table>
-        <Row>
-            <Button onClick={logout} color="primary">Logout</Button>
-        </Row>
-        </Container>
+        <tr>
+            <button onClick={logout} style={{marginTop:"100px"}}>Logout</button>
+        </tr>
+        </container>
     )
 }
 
