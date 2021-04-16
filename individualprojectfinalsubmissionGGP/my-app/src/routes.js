@@ -110,6 +110,7 @@ router.get('/contact_form/entries/:id', verifyToken, (req,res)=>{
 
 router.use("/portfolio", portfolioRoute);
 router.use("/resume", resumeRoute);
+router.use("/admin", resumeRoute);
 
 router.get("*", (req, res, next) => {
     let err = new Error("typed wrong URL");

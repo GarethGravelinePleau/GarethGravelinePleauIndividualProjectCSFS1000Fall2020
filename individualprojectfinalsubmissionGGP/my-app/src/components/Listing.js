@@ -3,8 +3,6 @@ import parseJwt from './Authentication'
 import { useHistory } from "react-router-dom";
 import '../Listing.css';
 
-
-
 const Listings = () => {
     let history = useHistory();
     const token = sessionStorage.getItem('token')
@@ -61,6 +59,7 @@ const Listings = () => {
             </table>
         <tr>
             <button onClick={logout} style={{marginTop:"100px"}}>Logout</button>
+            
         </tr>
         </container>
     )

@@ -10,6 +10,7 @@ import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Listing from './components/Listing';
 import PrivateRoute from './components/PrivateRoute';
+import ResumeListDash from './components/ResumeListDash'
 
  
 class App extends Component {
@@ -26,6 +27,9 @@ class App extends Component {
              <Route exact path="/login" component={Login} />
           <PrivateRoute path="/entries">
             <Listing />
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
+            <ResumeListDash />
           </PrivateRoute>
             <Route component={Error}/>
            </Switch>

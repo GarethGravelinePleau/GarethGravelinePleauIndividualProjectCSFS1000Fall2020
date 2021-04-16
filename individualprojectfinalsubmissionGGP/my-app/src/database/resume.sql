@@ -7,4 +7,6 @@ CREATE TABLE IF NOT EXISTS `resume` (
   PRIMARY KEY (`resume_id`)
 );
 
-INSERT INTO `resume` VALUES ('0','Project1','Project1','test project','1989-2021');
+INSERT INTO `resume` VALUES (1,'Elections Canada','Poll Clerk','- Tabulating official elections results for Elections Canada.','2019'), 
+(2,'Highschool Math Tutor','Tutor','- Assisting students in university math preparation.','2007-Ongoing'),
+(3,'Loblaws','Overnight Clerk','Store Preparation','2017-Ongoing');
