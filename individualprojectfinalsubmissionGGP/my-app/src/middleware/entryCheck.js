@@ -2,17 +2,17 @@ export default (req,res,next)=> {
     let errors = [];
     let newEntry = req.body;
     let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    let email = req.body.email;
-    if (!newEntry.name) {
+    let email = req.body.entry_email;
+    if (!newEntry.entry_name) {
         errors.push(" name");
       } 
-      if (!newEntry.email || !emailPattern.test(email)) {
+      if (!newEntry.entry_email || !emailPattern.test(email)) {
         errors.push(" email");
       }
-      if (!newEntry.phoneNumber) {
+      if (!newEntry.entry_number) {
         errors.push(" phoneNumber");
       }
-      if (!newEntry.content){
+      if (!newEntry.entry_content){
         errors.push(" content");
       }
       if  (errors.length >0) {

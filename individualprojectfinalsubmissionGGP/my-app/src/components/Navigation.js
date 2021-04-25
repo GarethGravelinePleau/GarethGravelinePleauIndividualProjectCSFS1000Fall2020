@@ -13,10 +13,7 @@ const Navigation = () => {
             <NavLink tag={RouteLink} to="/portfolio">Portfolio</NavLink>
             <NavLink tag={RouteLink} to="/resume">Resume</NavLink>
             <NavLink tag={RouteLink} to="/contact">Contact</NavLink>
-            <NavLink tag={RouteLink} to="/entries">Entries</NavLink>
-            <NavLink tag={RouteLink} to="/admin">AdminR</NavLink>
-            <NavLink tag={RouteLink} to="/admin2">AdminP</NavLink>
-            
+            <NavLink tag={RouteLink} to="/entries">Admin</NavLink>
             </div>
           </div>
          

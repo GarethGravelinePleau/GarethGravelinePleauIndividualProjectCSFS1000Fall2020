@@ -103,7 +103,7 @@ const Portfolio = () => {
                       <TableCell align="center">{p.portfolio_name}</TableCell>
                       <TableCell align="center" ><img src={p.portfolio_image} width="500" height="300"></img></TableCell>
                       <TableCell align="center">{p.portfolio_description}</TableCell>
-                      <TableCell align="center"><a href={"https://"+p.portfolio_link} style={{ color: "black" }}>Link</a></TableCell>
+                      <TableCell align="center"><a href={p.portfolio_link} style={{ color: "black" }}>Link</a></TableCell>
                     </TableRow>
                   ))}
             </TableBody>

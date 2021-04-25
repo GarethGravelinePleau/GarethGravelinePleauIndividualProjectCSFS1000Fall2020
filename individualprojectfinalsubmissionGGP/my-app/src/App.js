@@ -10,8 +10,13 @@ import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Listing from './components/Listing';
 import PrivateRoute from './components/PrivateRoute';
-import ResumeListDash from './components/ResumeListDash'
-
+import ResumeListDash from './components/ResumeListDash';
+import ResumeUpdate from './components/ResumeUpdate';
+import ResumeCreate from './components/ResumeCreate';
+import PortfolioListDash from './components/PortfolioListDash'
+import PortfolioUpdate from './components/PortfolioUpdate';
+import PortfolioCreate from './components/PortfolioCreate';
+import UserCreate from './components/UserCreate';
  
 class App extends Component {
   render() {
@@ -30,6 +35,24 @@ class App extends Component {
           </PrivateRoute>
           <PrivateRoute path="/admin">
             <ResumeListDash />
+          </PrivateRoute>
+          <PrivateRoute path="/resume/update/:id">
+            <Route component={ResumeUpdate} />
+          </PrivateRoute>
+          <PrivateRoute path="/resume/create/">
+            <Route component={ResumeCreate} />
+          </PrivateRoute>
+          <PrivateRoute path="/admin2">
+            <PortfolioListDash />
+          </PrivateRoute>
+          <PrivateRoute path="/portfolio/update/:id">
+            <Route component={PortfolioUpdate} />
+          </PrivateRoute>
+          <PrivateRoute path="/portfolio/create/">
+            <Route component={PortfolioCreate} />
+          </PrivateRoute>
+          <PrivateRoute path="/users/register/">
+            <Route component={UserCreate} />
           </PrivateRoute>
             <Route component={Error}/>
            </Switch>

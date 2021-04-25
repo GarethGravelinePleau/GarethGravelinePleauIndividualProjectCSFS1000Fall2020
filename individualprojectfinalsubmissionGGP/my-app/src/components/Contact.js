@@ -1,33 +1,68 @@
 import React, { useState } from 'react';
-import '../Contact.css';
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { makeStyles } from "@material-ui/core/styles";
+import Alert from "@material-ui/lab/Alert";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import '../Contact.css';
+
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    marginBottom: theme.spacing(4),
+    minWidth: 120,
+  },
+  textField: {
+    marginBottom: 30,
+  },
+  headerColor: {
+    color: "#666666",
+  },
+}));
  
-const Contact = () => {
+export default function Contact() {
+  const classes = useStyles();
+  const [entryID, setID] = useState("");
+  const [entryname, setName] = useState("");
+  const [entryemail, setEmail] = useState("");
+  const [entrynumber, setNumber] = useState("");
+  const [entrycontent, setContent] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [entries, setEntries] = useState({});
+let history = useHistory();
+  
+const URL = "http://localhost:4000/entries";
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [content, setContent] = useState("")
+const submitNewEntry = async (event) => {
+  event.preventDefault();
+  let newEntry = {      
+      
+      entry_name: entryname,
+      entry_email: entryemail,
+      entry_number: entrynumber,
+      entry_content: entrycontent,
+  };
 
-  const formSubmit = async event => {
-      event.preventDefault()
-      const response = await fetch('http://localhost:4000/contact_form/entries', {
-          method: 'POST',
-          headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-          body: JSON.stringify({name, email, phoneNumber, content})
-      })
-      const payload = await response.json()
-      if (response.status >= 400) {
-          alert(`Oops! Error: ${payload.message} for fields: ${payload.errors.join(",")}`)
-      } else {
-          alert(`Congrats! Submission submitted with id: ${payload.id}`)
-      }
+  
+
+  try {
+    axios.post(`${URL}/create`, newEntry).then(() => {
+      console.log("Successfully created entry");
+      setSuccess(true);
+    });
+
+    
+    setTimeout(function () {
+      history.push("/");
+    }, 2000);
+  } catch (err) {
+    console.log(err);
+    setSuccess(false);
+    throw err;
   }
+};
     return (
        <div style= {{fontFamily: 'Courier New, Courier, monospace'}}>
         
@@ -38,25 +73,31 @@ const Contact = () => {
 
             <div className="loginContainer">
         <section>
-          <form onSubmit={formSubmit}>
+          <form onSubmit={submitNewEntry}>
             <label>
-              <input name="name" id="contactName" type="text" onChange={e => setName(e.target.value)} />
+              <input name="name" id="contactName" type="text" required value={entryname} onChange={e => setName(e.target.value)} />
               <div className="label-text">Full Name</div>
             </label>
             <label>
-              <input type="text" name="email" id="email" onChange={e => setEmail(e.target.value) }/>
+              <input type="email" name="email" id="email" required value={entryemail} onChange={e => setEmail(e.target.value) }/>
               <div className="label-text">Email</div>
             </label>
             <label>
-              <input type="tel" name="phone" id="phone" onChange={e => setPhoneNumber(e.target.value)}/>
+              <input type="text" name="phone" id="phone" required value={entrynumber} onChange={e => setNumber(e.target.value)}/>
               <div className="label-text">Phone Number</div>
             </label>
             <label>
-              <input type="textarea" name="text" id="comments" onChange={e => setContent(e.target.value)}/>
+              <input type="textarea" name="text" id="comments" required value={entrycontent} onChange={e => setContent(e.target.value)}/>
               <div className="label-text">Comments</div>
             </label>
             <button type="submit" value="Submit">Submit</button>
           </form>
+          {success && (
+        <alert severity="success" color>
+          New entry submitted!
+        </alert>
+      )}
+
         </section>
       </div>
         
@@ -73,4 +114,3 @@ const Contact = () => {
     );
 }
  
-export default Contact;

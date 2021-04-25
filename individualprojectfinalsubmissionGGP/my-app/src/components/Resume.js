@@ -15,6 +15,7 @@ import {
   TableRow,
 } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
+import { FaLeaf } from "react-icons/fa";
 
 const Resume = () => {
     
@@ -59,6 +60,10 @@ const Resume = () => {
           <Table>
             <TableHead>
               <TableRow>
+              <TableCell
+                  align="center"
+                >
+                </TableCell>
                 <TableCell
                   align="center"
                 >
@@ -82,7 +87,8 @@ const Resume = () => {
                 resumeList
                   .map((p) => (
                     <TableRow key={p.resume_id}>
-                      <TableCell align="center">{p.employer_name}</TableCell>
+                      <TableCell align="center"><FaLeaf/></TableCell>
+                      <TableCell align="center" style={{fontSize: '20px', textAlign: 'left', marginTop: '14%', fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', color: 'grey'}}>{p.employer_name}</TableCell>
                       <TableCell align="center" >{p.position_name}</TableCell>
                       <TableCell align="center">{p.position_desc}</TableCell>
                       <TableCell align="center">{p.date}</TableCell>

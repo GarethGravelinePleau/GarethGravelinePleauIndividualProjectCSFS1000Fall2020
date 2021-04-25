@@ -21,10 +21,9 @@ import Paper from "@material-ui/core/Paper";
 import { useHistory } from "react-router-dom";
 import parseJwt from './Authentication'
 
-
-function ResumeListDash() {
-  const [resumeListDash, setResumeListDash] = useState("");
-  const URL = "http://localhost:4000/resume/";
+function PortfolioListDash() {
+  const [portfolioListDash, setPortfolioListDash] = useState("");
+  const URL = "http://localhost:4000/portfolio/";
   const [open, setOpen] = useState(false);
   const [btnDelete, setBtnDelete] = useState("");
 
@@ -58,7 +57,7 @@ function ResumeListDash() {
             console.log(err);
           });
         console.log(responseData.data.result);
-        setResumeListDash(responseData.data.result);
+        setPortfolioListDash(responseData.data.result);
       } catch (err) {
         console.log(err);
       }
@@ -66,11 +65,12 @@ function ResumeListDash() {
     fetchData();
   }, []);
 
-  const deleteResumeListDash= (e, id) => {
+  
+  const deletePortfolioListDash= (e, id) => {
     e.preventDefault();
 
     axios.delete(`${URL}/delete/${id}`).then((res) => {
-      setResumeListDash(
+      setPortfolioListDash(
         
       );
     });
@@ -85,7 +85,7 @@ function ResumeListDash() {
   
 
   return (
-    <div className="resume-list-dash">
+    <div className="portfolio-list-dash">
       <div className="container">
         <h1
           style={{
@@ -96,7 +96,7 @@ function ResumeListDash() {
             color:"grey"
           }}
         >
-          RESUME CRUD
+          PORTFOLIO CRUD
         </h1>
         <TableContainer component={Paper} style={{color:"Grey", opacity:"0.8"}}>
           <Table style={{color:"Grey", opacity:"0.8"}}>
@@ -106,42 +106,42 @@ function ResumeListDash() {
                   align="center"
                   style={{ fontWeight: "700", color: "Black" }}
                 >
-                  Employer Name
+                  Portfolio Item Name
                 </TableCell>
                 <TableCell
                   align="center"
                   style={{ fontWeight: "700", color: "Black" }}
                 >
-                  Position Name
+                  Portfolio Image
                 </TableCell>
                 <TableCell
                   align="center"
                   style={{ fontWeight: "700", color: "Black" }}
                 >
-                  Position Description
+                  Portfolio Item Description
                 </TableCell>
                 <TableCell
                   align="center"
                   style={{ fontWeight: "700", color: "Black" }}
                 >
-                  Date
+                  Github Link
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {resumeListDash &&
-                resumeListDash
+              {portfolioListDash &&
+                portfolioListDash
                   .map((p) => (
-                    <TableRow key={p.resume_id}>
+                    <TableRow key={p.portfolio_id}>
                       
-                      <TableCell align="center">{p.employer_name}</TableCell>
-                      <TableCell align="center" >{p.position_name}</TableCell>
-                      <TableCell align="center">{p.position_desc}</TableCell>
-                      <TableCell align="center">{p.date}</TableCell>
+                      <TableCell align="center">{p.portfolio_name}</TableCell>
+                      <TableCell align="center" >{p.portfolio_image}</TableCell>
+                      <TableCell align="center">{p.portfolio_description}</TableCell>
+                      <TableCell align="center">{p.portfolio_link}</TableCell>
                     
                       <TableCell align="center">
                         <Link
-                          to={`/resume/update/${p.resume_id}`}
+                          to={`/portfolio/update/${p.portfolio_id}`}
                         >
                           <Button style={{color:"Grey"}}>
                             <EditIcon />
@@ -151,7 +151,7 @@ function ResumeListDash() {
                         style={{color:"Grey"}}
                           onClick={(e) => {
                             setOpen(true);
-                            setBtnDelete(p.resume_id);
+                            setBtnDelete(p.portfolio_id);
                           }}
                         >
                           <DeleteIcon />
@@ -164,7 +164,7 @@ function ResumeListDash() {
         </TableContainer>
         
         <Link
-        to={`/resume/create/`}
+        to={`/portfolio/create/`}
         >
             <button style={{marginTop:"50px"}}>CREATE</button>
             
@@ -180,11 +180,11 @@ function ResumeListDash() {
           aria-describedby="alert-dialog-description"
         >
           <DialogTitle id="alert-dialog-title">
-            {"Delete Resume Section"}
+            {"Delete Portfolio Section"}
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <div>Are you sure you'd like to delete resume section?</div>
+              <div>Are you sure you'd like to delete this portfolio section?</div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -193,7 +193,7 @@ function ResumeListDash() {
             </Button>
             <Button
               onClick={(e, radio_id) => {
-                deleteResumeListDash(e, btnDelete);
+                deletePortfolioListDash(e, btnDelete);
               }}
               color="primary"
             >
@@ -206,4 +206,4 @@ function ResumeListDash() {
   );
 }
 
-export default ResumeListDash;
+export default PortfolioListDash;

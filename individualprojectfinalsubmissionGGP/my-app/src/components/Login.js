@@ -4,24 +4,26 @@ import { useHistory, useLocation } from 'react-router-dom'
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import parseJwt from './Authentication'
+
 
 
 const Login = () => {
     let history = useHistory();
     let location = useLocation();
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [users_email, setEmail] = useState("")
+    const [users_password, setPassword] = useState("")
 
     const loginSubmit = async event => {
         
         event.preventDefault()
-        const response = await fetch('http://localhost:4000/auth', {
+        const response = await fetch('http://localhost:4000/users/login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-            body: JSON.stringify({email, password})
+            body: JSON.stringify({users_email, users_password})
         })
         const payload = await response.json()
         if (response.status >= 400) {

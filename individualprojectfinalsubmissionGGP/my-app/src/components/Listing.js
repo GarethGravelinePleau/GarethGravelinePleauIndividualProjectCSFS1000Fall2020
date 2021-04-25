@@ -1,30 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import parseJwt from './Authentication'
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import '../Listing.css';
+import axios from "axios";
 
 const Listings = () => {
     let history = useHistory();
     const token = sessionStorage.getItem('token')
-    const user = parseJwt(token).email
-    const [listing, setListing] = useState([])
+    const URL = "http://localhost:4000/entries/";
+    const user = parseJwt(token).users_email
+    const [listings, setListings] = useState("");
     const logout = event => {
         event.preventDefault()
         sessionStorage.removeItem('token')
         history.push("/login")
     }
     useEffect(() => {
-        const getData = async () => {
-            const response = await fetch('http://localhost:4000/contact_form/entries', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            })
-            const data = await response.json()
-            setListing(data)
-        }
-        getData()
+        async function fetchData() {
+            try {
+              const responseData = await axios
+                .get(`${URL}`, {
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                })
+                .then((response) => {
+                  return response;
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
+              console.log(responseData.data.result);
+              setListings(responseData.data.result);
+            } catch (err) {
+              console.log(err);
+            }
+          }
+        fetchData()
     }, [token])
     return (
         <container>
@@ -34,7 +46,7 @@ const Listings = () => {
             <table id="listingTable">
                 <thead>
                     <tr>
-                    <th>ID</th>
+                    <th >ID</th>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
@@ -42,17 +54,19 @@ const Listings = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {listing.length === 0 &&
+                    {listings.length === 0 &&
                         <tr><td colSpan="5"><i>No Current Entries</i></td></tr>
                     }
-                    {listing.length > 0 &&
-                        listing.map(entry => 
-                            <tr>
-                            <td>{entry.id}</td>
-                            <td>{entry.name}</td>
-                            <td>{entry.phoneNumber}</td>
-                            <td>{entry.email}</td>
-                            <td>{entry.content}</td>
+                    {listings.length > 0 &&
+                        listings.map((p)=> 
+                            <tr key={p.entry_id}>
+                            <td style={{width: "50px", color: "grey"
+                            }}>{p.entry_id}</td>
+                            <td>{p.entry_name}</td>
+                            <td>{p.entry_email}</td>
+                            <td>{p.entry_number}</td>
+                            <td>{p.entry_content}</td>
+                            
                             </tr>)
                     }
                 </tbody>
@@ -61,6 +75,28 @@ const Listings = () => {
             <button onClick={logout} style={{marginTop:"100px"}}>Logout</button>
             
         </tr>
+        <tr>
+            <Link to ={`/admin`}>
+                <button>
+                    RESUME CRUD
+                </button>
+            </Link>
+        </tr>
+        <tr>
+            <Link to ={`/users/register`}>
+                <button>
+                    ADD NEW ADMIN
+                </button>
+            </Link>
+        </tr>
+        <tr>
+            <Link to ={`/admin2`}>
+                <button>
+                    PORTFOLIO CRUD
+                </button>
+            </Link>
+        </tr>
+        
         </container>
     )
 }
