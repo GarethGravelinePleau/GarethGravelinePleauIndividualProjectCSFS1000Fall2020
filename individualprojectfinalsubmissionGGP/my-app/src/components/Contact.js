@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
-import Alert from "@material-ui/lab/Alert";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -30,7 +29,7 @@ export default function Contact() {
   const [entrynumber, setNumber] = useState("");
   const [entrycontent, setContent] = useState("");
   const [success, setSuccess] = useState(false);
-  const [entries, setEntries] = useState({});
+  const [newEntry, setNewEntry] = useState({});
 let history = useHistory();
   
 const URL = "http://localhost:4000/entries";

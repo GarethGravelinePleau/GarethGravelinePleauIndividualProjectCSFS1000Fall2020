@@ -26,7 +26,7 @@ const home = () => {
               <div id="bracketContainer" style={{fontSize: '150px', textAlign:'center', marginLeft:"20px"}}>]</div>
           </div>
 
-          <div id="motto" style={{textAlign: 'center'}}>The ecological impact of internet usage is far from the minds of most people.<br /><br /><br /><br />It's influence is mostly invisible to us.<br /><br /><br /><br />However, it's estimated that<br /><br /><br /><br /><div style={{fontSize: '60px'}}>2%</div><br /><br /><br />of carbon emissions are caused by internet usage. <sup style={{fontSize: '15px'}}><a href="https://kinsta.com/blog/zero-carbon-websites" style={{color: 'white'}}>1</a></sup><br /><br /><br /><br />As a developer, my Mission Statement is simple:<br /><br /><br /><br />
+          <div id="motto" style={{textAlign: 'center'}}>The ecological impact of the world's internet usage is staggering. <br /><br /><br /><br />Indeed, it's influence is mostly invisible to us.<br /><br /><br /><br />However, it's estimated that<br /><br /><br /><br /><div style={{fontSize: '60px'}}>2%</div><br /><br /><br />of carbon emissions can be directly attributed to worldwide internet usage. <sup style={{fontSize: '15px'}}><a href="https://kinsta.com/blog/zero-carbon-websites" style={{color: 'white'}}>1</a></sup><br /><br /><br /><br />As a developer, my Mission Statement is simple:<br /><br /><br /><br />
               vibrant websites <br /><br /><br /><br /> built for a sustainable tomorrow <FaLeaf/>
           </div>
           <br /><br />

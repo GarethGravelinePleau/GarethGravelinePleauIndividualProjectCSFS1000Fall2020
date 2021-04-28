@@ -24,7 +24,7 @@ resumeRoute.get("/", (req, res) => {
     }
   });
 
-//Get a portfolio section listed with ID
+//Get a resume section listed with ID
 resumeRoute.get("/:id", (req, res) => {
     try {
       let id = req.params.id;
@@ -50,7 +50,7 @@ resumeRoute.get("/:id", (req, res) => {
     }
   });
 
-  //Create New Portfolio Section
+  //Create New resume Section
   resumeRoute.post("/create", async (req, res) => {
     try {
       const {
@@ -81,7 +81,7 @@ resumeRoute.get("/:id", (req, res) => {
     }
   });
 
-  //Update A Portfolio Section
+  //Update A resume Section
 
   resumeRoute.put("/update/:id", async (req, res) => {
     try {
@@ -115,7 +115,7 @@ resumeRoute.get("/:id", (req, res) => {
     }
   });
   
-  //Delete Portfolio Section By ID
+  //Delete resume Section By ID
 
  resumeRoute.delete("/delete/:id", (req, res) => {
     const id = req.params.id;

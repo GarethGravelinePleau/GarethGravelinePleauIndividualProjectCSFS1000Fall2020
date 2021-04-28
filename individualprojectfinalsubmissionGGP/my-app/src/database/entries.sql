@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS entries (
+CREATE TABLE IF NOT EXISTS `entries` (
   `entry_id` int(20) NOT NULL AUTO_INCREMENT,
   `entry_name` varchar(100) NOT NULL DEFAULT '',
   `entry_email` varchar(100) NOT NULL DEFAULT '',

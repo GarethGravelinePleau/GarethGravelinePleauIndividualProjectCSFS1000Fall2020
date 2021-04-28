@@ -8,9 +8,6 @@ import usersRoute from "./routes/usersRoute"
 
 
 const router = express.Router(); 
-let jwt = require("jsonwebtoken");
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
 
 router.use("/portfolio", portfolioRoute);

@@ -2,7 +2,6 @@ import express from "express";
 import db from ".././database/connection";
 import { stringify } from "flatted";
 import entryChecker from "../middleware/entryCheck";
-import verifyToken from "../middleware/jwtVerify";
 
 const entriesRoute = express.Router();
 
@@ -39,7 +38,7 @@ const entriesRoute = express.Router();
 entriesRoute.get("/", (req, res) => {
     try {
       db.query(
-        "SELECT entry_id, entry_name, entry_email, entry_number, entry_content FROM entries ",
+        "SELECT entry_id, entry_name, entry_email, entry_number, entry_content FROM entries ORDER BY entry_id DESC ",
         (err, result) => {
           if (err) {
             console.log(err);

@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import parseJwt from './Authentication'
+
 
 
 
@@ -44,11 +44,11 @@ const Login = () => {
                 <form onSubmit={loginSubmit}>
                   <label>
                     <input type="text" name="email" id="email" onChange={e => setEmail(e.target.value) }/>
-                    <div className="label-text">Email</div>
+                    <div className="label-text" style={{ fontFamily: "courier new"}}>Email</div>
                   </label>
                   <label>
                     <input type="password" name="password" id="password" onChange={e => setPassword(e.target.value)}/>
-                    <div className="label-text">Password</div>
+                    <div className="label-text" style={{ fontFamily: "courier new"}}>Password</div>
                   </label>
                   <button type="submit" value="Submit">Submit</button>
                 </form>

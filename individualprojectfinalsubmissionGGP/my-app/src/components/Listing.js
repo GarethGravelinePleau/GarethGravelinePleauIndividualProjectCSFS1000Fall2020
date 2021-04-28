@@ -22,6 +22,8 @@ const Listings = () => {
                 .get(`${URL}`, {
                   headers: {
                     "Content-Type": "application/json",
+                    'Authorization': `Bearer ${token}`
+
                   },
                 })
                 .then((response) => {
@@ -41,7 +43,7 @@ const Listings = () => {
     return (
         <container>
             
-            <h1 style={{fontSize:"30px", textAlign:"center", marginBottom:"50px"}}>Hello: {user}, here are your entries!</h1>
+            <h1 style={{fontSize:"30px", textAlign:"center", marginBottom:"50px"}}>Hello, here are your entries!</h1>
             
             <table id="listingTable">
                 <thead>
@@ -60,7 +62,7 @@ const Listings = () => {
                     {listings.length > 0 &&
                         listings.map((p)=> 
                             <tr key={p.entry_id}>
-                            <td style={{width: "50px", color: "grey"
+                            <td style={{width: "50px", color: "white"
                             }}>{p.entry_id}</td>
                             <td>{p.entry_name}</td>
                             <td>{p.entry_email}</td>

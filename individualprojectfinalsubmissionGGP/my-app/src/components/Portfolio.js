@@ -3,7 +3,6 @@ import '../Portfolio.css';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import {
   TableBody,
@@ -70,9 +69,9 @@ const Portfolio = () => {
         >
           Come See What I've Been Working On!
         </h1>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} style={{backgroundColor: "#f0eeee", opacity:"0.8", marginLeft:"10vw", marginRight:"40px", width:"80vw" }}>
           <Table>
-            <TableHead>
+            <TableHead style={{backgroundImage: "linear-gradient(to right, #103C7F , #93B8EF)",  opacity:"0.8"}}>
               <TableRow>
                 <TableCell
                   align="center"
@@ -101,7 +100,7 @@ const Portfolio = () => {
                   .map((p) => (
                     <TableRow key={p.portfolio_id}>
                       <TableCell align="center">{p.portfolio_name}</TableCell>
-                      <TableCell align="center" ><img src={p.portfolio_image} width="500" height="300"></img></TableCell>
+                      <TableCell align="center" ><img src={p.portfolio_image} width="300vw" height="200vh"></img></TableCell>
                       <TableCell align="center">{p.portfolio_description}</TableCell>
                       <TableCell align="center"><a href={p.portfolio_link} style={{ color: "black" }}>Link</a></TableCell>
                     </TableRow>
@@ -110,7 +109,7 @@ const Portfolio = () => {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[10, 15, 25]}
+          rowsPerPageOptions={[5, 10]}
           component="div"
           count={portfolioList.length}
           rowsPerPage={rowsPerPage}
